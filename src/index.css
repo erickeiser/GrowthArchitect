@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --primary: #f59e0b;
+  --bg-dark: #0c0a09;
+  --card-dark: #1c1917;
+}
+
+body {
+  background-color: #0c0a09;
+  color: #f5f5f4;
+}
+
+.app-shell {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .app-shell {
+    background-color: #0c0a09;
+  }
+  
+  main {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+.script-block {
+  border-left: 3px solid var(--primary);
+  padding-left: 12px;
+  margin-top: 8px;
+  white-space: pre-wrap;
+  font-size: 0.85rem;
+  color: #d6d3d1;
+  font-family: var(--font-mono);
+  line-height: 1.6;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  border-radius: 0 12px 12px 0;
+}
+
+.glass-card {
+  background: rgba(41, 37, 36, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
